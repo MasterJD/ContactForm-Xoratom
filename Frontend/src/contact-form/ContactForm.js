@@ -49,7 +49,7 @@ function ContactForm() {
       // Automatically hide the alert after 3 seconds (adjust as needed)
       setTimeout(() => {
         setAlertMessage(null);
-      }, 3000);
+      }, 4000);
     };
     return (
         <div>
