@@ -1,0 +1,400 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+/* Add this CSS code to your existing CSS */
+
+/* Style the date input */
+input[type="date"] {
+    background: none;
+    border: none;
+    border-bottom: solid 2px #023e8a;
+    color: #023e8a;
+    font-size: 1.000em;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 0em 0 1.875em 0;
+    padding: 0 0 0.875em 0;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  
+  input[type="date"]:focus {
+    outline: none;
+    padding: 0 0 0.875em 0;
+  }
+  
+  /* Adjust the width of input fields for better responsiveness */
+  .name,
+  .email,
+  .telephone,
+  .message,
+  .subject {
+    width: 100%;
+  }
+  
+  /* Adjust padding of the submit button for smaller screen sizes */
+  @media screen and (max-width: 480px) {
+    #form_button {
+      padding: 15px 25px;
+    }
+  }
+  
+html {
+  font-family: 'Montserrat', Arial, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: #edf6f9;
+}
+
+button {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, input, select, textarea {
+  color: #023e8a;
+  font: inherit;
+  margin: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+textarea {
+  overflow: auto;
+}
+
+#container {
+  border: solid 3px #023e8a;
+  max-width: 70%;
+  margin: 60px auto;
+  position: relative;
+  border-radius: 10px;
+}
+
+form {
+  padding: 37.5px;
+  margin: 50px 0;
+}
+
+h1 {
+  color: #023e8a;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 7px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.underline {
+  border-bottom: solid 2px #023e8a;
+  margin: -0.512em auto;
+  width: 300px;
+}
+
+.icon_wrapper {
+  margin: 40px auto 0;
+  width: 100%;
+}
+
+.icon {
+  display: block;
+  fill: #023e8a;
+  height: 50px;
+  margin: -30px auto;
+  width: 50px;
+}
+
+.email {
+	float: right;
+	width: 45%;
+}
+
+input[type='text'], [type='email'], select, textarea {
+	background: none;
+    border: none;
+	border-bottom: solid 2px #023e8a;
+	color: #023e8a;
+	font-size: 1.000em;
+    font-weight: 400;
+    letter-spacing: 1px;
+	margin: 0em 0 1.875em 0;
+	padding: 0 0 0.875em 0;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+input[type='text']:focus, [type='email']:focus, textarea:focus {
+	outline: none;
+	padding: 0 0 0.875em 0;
+}
+
+.message {
+	float: none;
+}
+
+.name {
+	float: left;
+	width: 45%;
+}
+
+select {
+  background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.subject {
+  width: 100%;
+}
+
+.telephone {
+  width: 100%;
+}
+
+textarea {
+	line-height: 150%;
+	height: 150px;
+	resize: none;
+    width: 100%;
+    border-radius: 2px;
+}
+
+::-webkit-input-placeholder {
+	color: #023e8a;
+}
+
+:-moz-placeholder { 
+	color: #023e8a;
+	opacity: 1;
+}
+
+::-moz-placeholder {
+	color: #023e8a;
+	opacity: 1;
+}
+
+:-ms-input-placeholder {
+	color: #023e8a;
+}
+
+#form_button {
+  background: none;
+  border: solid 2px #023e8a;
+  color: #023e8a;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-size: 0.875em;
+  font-weight: bold;
+  outline: none;
+  padding: 20px 35px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+#form_button:hover {
+  background: #023e8a;
+  color: #F2F3EB;
+}
+@media screen and (min-width: 1920px) {
+    #container {
+      max-width: 40%;
+    }
+}
+@media screen and (min-width: 1600px) {
+    #container {
+      max-width: 40%;
+    }
+}
+@media screen and (min-width: 1400px) {
+    #container {
+      max-width: 40%;
+    }
+}
+@media screen and (max-width: 768px) {
+  #container {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 26px;
+  }
+  
+  .underline {
+    width: 68px;
+  }
+  
+  #form_button {
+    padding: 15px 25px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  h1 {
+    font-size: 18px;
+  }
+  
+  .icon {
+    height: 35px;
+    width: 35px;
+  }
+  
+  .underline {
+    width: 53px;
+  }
+  
+  input[type='text'], [type='email'], select, textarea {
+    font-size: 0.875em;
+  }
+}
+/* Add this CSS code to your existing CSS */
+
+/* Style the textarea */
+textarea {
+    border: solid 2px #023e8a; /* Add border styling when focused */
+}
+.submit{
+    text-align: center;
+}
+.submitButton{
+    border-radius: 5px;
+}
+/*--------------------FILE--------------------*/
+.fileLabel{
+    color: #023e8a;
+}
+input[type="file"] {
+    outline: none;
+    padding: 4px;
+    margin: -4px;
+}
+
+input[type="file"]:focus-within::file-selector-button,
+input[type="file"]:focus::file-selector-button {
+    outline: 2px solid #023e8a;
+    outline-offset: 2px;
+}
+
+input[type="file"]::before {
+    top: 16px;
+}
+
+input[type="file"]::after {
+    top: 14px;
+}
+
+/* ------- From Step 2 ------- */
+
+input[type="file"] {
+    position: relative;
+}
+
+input[type="file"]::file-selector-button {
+    width: 160px;
+    color: transparent;
+}
+
+/* Faked label styles and icon */
+input[type="file"]::before {
+    position: absolute;
+    pointer-events: none;
+    /*   top: 11px; */
+    left: 40px;
+    color: #023e8a;
+    content: "Subir Archivo";
+}
+
+input[type="file"]::after {
+    position: absolute;
+    pointer-events: none;
+    /*   top: 10px; */
+    left: 16px;
+    height: 20px;
+    width: 20px;
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230964B0'%3E%3Cpath d='M18 15v3H6v-3H4v3c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-3h-2zM7 9l1.41 1.41L11 7.83V16h2V7.83l2.59 2.58L17 9l-5-5-5 5z'/%3E%3C/svg%3E");
+}
+
+/* ------- From Step 1 ------- */
+
+/* file upload button */
+input[type="file"]::file-selector-button {
+    border-radius: 4px;
+    padding: 0 16px;
+    height: 40px;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+    margin-right: 16px;
+    transition: background-color 200ms;
+    }
+
+/* file upload button hover state */
+input[type="file"]::file-selector-button:hover {
+    background-color: #f3f4f6;
+}
+
+/* file upload button active state */
+input[type="file"]::file-selector-button:active {
+    background-color: #e5e7eb;
+}
+.successAlert{
+    background-color: #14A44D;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+}
+
+.errorAlert{
+    background-color: #DC4C64;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: white;
+}
+/* Adjust padding of the submit button for smaller screen sizes */
+@media screen and (max-width: 480px) {
+    #form_button {
+        padding: 15px 25px;
+    }
+}
