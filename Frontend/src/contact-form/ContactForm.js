@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './ContactForm.css';
+import axios from 'axios';
 
 function ContactForm() {
     const [formData, setFormData] = useState({
@@ -10,37 +11,32 @@ function ContactForm() {
         image: null
     });
 
-    const onFormFill = (e) => {
-        const { name, value, type, files } = e.target;
-        setFormData({
-        ...formData,
-        [name]: type === 'file' ? files[0] : value
-        });
+    const onFormFill = (event) => {
+        const { name, value, type } = event.target;
+
+        if (type === 'file') {
+            setFormData({ ...formData, [name]: event.target.files[0] });
+        } else {
+            setFormData({ ...formData, [name]: value });
+        }
+
+        setFormData({...formData, [name]: value});
     };
 
-    const onFormSubmit = (e) => {
-        e.preventDefault();
-        // Aquí puedes enviar los datos del formulario al backend
+    const onFormSubmit = (event) => {
+        event.preventDefault();
+        axios.post("http://localhost:80/API/contact_message", formData);
         console.log(formData);
         // Restablece el formulario después de enviar
-        setFormData({
-        name: '',
-        email: '',
-        birthDate: '',
-        message: '',
-        image: null
-        });
+        /*setFormData({
+            name: '',
+            email: '',
+            birthDate: '',
+            message: '',
+            image: null
+        });*/
     };
-    const [fileName, setFileName] = useState('');
 
-    const handleFileChange = (e) => {
-        const file = e.target.files[0];
-        if (file) {
-            setFileName(file.name);
-        } else {
-            setFileName('');
-        }
-    };
     const [alertMessage, setAlertMessage] = useState(null);
 
     // Function to show the alert
@@ -69,28 +65,28 @@ function ContactForm() {
                     </svg>
                 </div>
 
-                <form action="#" method="post" id="contact_form">
+                <form onSubmit={onFormSubmit} method="post" id="contact_form">
                     <div className="name">
-                        <label for="name"></label>
-                        <input type="text" placeholder="Nombre" name="name" id="name_input" required />
+                        <label></label>
+                        <input type="text" placeholder="Nombre" name="name" onChange={onFormFill} required />
                     </div>
                     <div className="email">
-                        <label for="email"></label>
-                        <input type="email" placeholder="Correo Electrónico" name="email" id="email_input" required />
+                        <label></label>
+                        <input type="email" placeholder="Correo Electrónico" name="email" onChange={onFormFill} required />
                     </div>
                     <div className="telephone">
-                        <label for="name"></label>
-                        <input type="date" placeholder="Fecha de Nacimiento" id="birthday" name="birthday" required />
+                        <label></label>
+                        <input type="date" placeholder="Fecha de Nacimiento" name="birthDate" onChange={onFormFill} required />
                     </div>
                     <div className="message">
-                        <label for="message"></label>
-                        <textarea name="message" placeholder="Mensaje" id="message_input" cols="30" rows="5" required></textarea>
+                        <label></label>
+                        <textarea type="text" name="message" placeholder="Mensaje" onChange={onFormFill} required></textarea>
                     </div>
-                    <div class="file-upload">
-                        <label for="file" className='fileLabel'><strong>Adjuntar imagen:</strong></label>
+                    <div className="file-upload">
+                        <label className='fileLabel'><strong>Adjuntar imagen:</strong></label>
                         <br />
                         <br />
-                        <input type="file" id="file" name="file" accept="image/*" onchange="updateFileName()" required/>
+                        <input type="file" name="image" accept="image/*" onChange={onFormFill} required/>
                     </div>
                     <br />
                     <div className="submit">
